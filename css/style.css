@@ -70,6 +70,10 @@ body{
     width: 100%;
 }
 
+.content{
+    width: 100%;
+}
+
 .welcome-text div{
     display: flex;
     gap: 0.6rem;
@@ -85,9 +89,9 @@ body{
     width: 32px;
 }
 
-.welcome-text button{
+/* .welcome-text button{
     margin-top: 1.6rem;
-}
+} */
 
 .button{
     padding: 0.7rem 1rem;
@@ -113,6 +117,27 @@ body{
 
 .content > img{
     display:none;
+}
+
+#nombre{
+  padding: 0.8rem 1rem;
+  width: 90%;
+  border-radius: 333px;
+  border: none;
+  background-color: var(--input-background-color);
+}
+
+#nombre::placeholder{
+    color: var(--place-holder-color);
+}
+
+.inputs{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
 }
 
 @media (min-width: 768px){
