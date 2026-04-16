@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GymBro - Workout Generato</title>
+    <title>GymBro - Workout Generator</title>
     <!-- Icon  -->
     <link rel="icon" type="icon.svg" href="assets/logo/logo.svg">
     <meta name="description" content="Workout program generator for beginners with weight tracking.">
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <section id="welcome-page" class="mobile-unboarding">
+   <section class="mobile-unboarding">
     <div class="content">
         <img src="assets/welcome_img/welcome2.jpg" alt="Welcome desktop">
         <img src="assets/welcome_img/image 96.jpg" alt="Welcome img">
@@ -26,11 +26,13 @@
                 <h1>GymBro</h1>
             </div>
            <p>Crea tu rutina personalizada</p>
-           <div class="inputs">
-                <button class="button" id="btn-unboarding">Empezar →</button>
-            </div>
+           <form id="start-form" class="inputs">
+                <button class="button" type="submit">Empezar →</button>
+           </form>
         </div>
     </div>
    </section>
+
+   <script src="js/script.js"></script>
 </body>
 </html>

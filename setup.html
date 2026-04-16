@@ -26,8 +26,22 @@
                 <h1>GymBro</h1>
             </div>
             <p>Crea tu rutina personalizada</p>
-            <form class="inputs" id="name-form">
-               <input type="text" placeholder="Nombre:" id="nombre">
+            <form class="inputs" id="setup-form">
+                <select name="goal" id="goal">
+                    <option value="" disabled selected>Objetivo:</option>
+                    <option value="bulk">Ganar de masa muscular</option>
+                    <option value="cut">Perder grasa</option>
+                </select>
+                <select name="days" id="days">
+                    <option value="" disabled selected>Frecuencia de entrenamiento</option>
+                    <option value="1">1 día a la semana</option>
+                    <option value="2">2 días a la semana</option>
+                    <option value="3">3 días a la semana</option>
+                    <option value="4">4 días a la semana</option>
+                    <option value="5">5 días a la semana</option>
+                    <option value="6">6 días a la semana</option>
+                    <option value="7">7 días a la semana</option>
+                </select>
                <button class="button">Continuar →</button>
             </from> 
         </div>
