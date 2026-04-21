@@ -243,11 +243,40 @@ h1 {
     color: var(--place-holder-color);
 }
 
-#error-name{
+.error{
     color: #f31515;
     padding: 0 1rem;
     font-size: 0.8rem;
+    align-self: start;
 }
+
+.hidden{
+    display: none;
+}
+
+.minus{
+    color: var(--accent-color);
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.plus{
+    color: var(--accent-color);
+    font-size: 1.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.weight-control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
 @media (min-width: 768px) {
 
     .mobile-unboarding {
