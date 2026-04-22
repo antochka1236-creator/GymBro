@@ -197,6 +197,7 @@ h1 {
     flex-flow: row wrap;
     gap: 2rem;
     padding-bottom: 1rem;
+    width: 100%;
 }
 
 .card h2 {
@@ -256,18 +257,23 @@ h1 {
 
 .minus{
     color: var(--accent-color);
-    font-size: 2rem;
-    background: none;
+    font-size: 1rem;
+    background: #f6f8ff;
     border: none;
     cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    border-radius: 333px;
 }
 
 .plus{
     color: var(--accent-color);
-    font-size: 1.4rem;
+    font-size: 1rem;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.5rem 0.7rem;
+    border-radius: 333px;
+    background: #f6f8ff;
 }
 
 .weight-control{
@@ -357,6 +363,6 @@ h1 {
     }
     
     .card{
-        flex: 0 0 30%;
+        flex: 0 0 25%;
     }
 }

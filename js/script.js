@@ -15,11 +15,10 @@ if (formName){
     formName.addEventListener('submit', (e) =>{
         e.preventDefault()
 
-  const value = nameInput.value.trim();
+  const value = nameInput.value.trim()
+  
+  saveUser(value)
 
-  if (!isNameValid(value)) return;
-
-  isUserExist(value);
     })
 }
 
@@ -43,15 +42,16 @@ function isNameValid(input){
 
 // Funcion para registrar usuario
 
-function isUserExist(input){
+function saveUser(input){
     if(!isNameValid(input)) return
 
-    if (!localStorage.getItem("username")){
-        localStorage.setItem("username", input)
-        window.location.href = "setup.html"
-    }else{
-       window.location.href = "workout.html"
-    }
+    const user = JSON.parse(localStorage.getItem('user')) || {}
+
+    user.name = input
+
+    localStorage.setItem('user', JSON.stringify(user))
+
+    window.location.href = 'setup.html'
 }
 
 
@@ -71,11 +71,21 @@ if (formSetup){
   formSetup.addEventListener('submit', (e) =>{
     e.preventDefault()
 
-   isGoalSelected(selectGoal.value)
-   areDaysSelected(selectDays.value)
+    const goal = selectGoal.value
+    const days = selectDays.value
+
+    const isGoalOk = isGoalSelected(goal)
+    const isDaysOk = areDaysSelected(days)  
+
+    if (isGoalOk && isDaysOk){
+      saveUserGoal(goal,days)
+      window.location.href = "workout.html"
+    }
+   
   })
 }
 
+// Escuchadores  de eventos para validar opciones y  generar programma 
 if (formSetup){
   formSetup.addEventListener('change', (e) =>{
   
@@ -90,8 +100,6 @@ if (formSetup){
 }
 
 // Funcion para validar si los campos de select no estan vacios
-
-
 function isGoalSelected(goal){
    if (!goal){
       errorGoal.textContent = 'Elige un objetivo antes de seguir'
@@ -114,4 +122,38 @@ function areDaysSelected(days){
       errorDays.classList.add('hidden')
       return true
     }
+}
+
+// Funcion para guardar el objetivo del usuario
+function saveUserGoal(goal,days){
+  
+  const user = JSON.parse(localStorage.getItem('user')) || {};
+
+  user.goal = goal;
+  user.days = days;
+
+  localStorage.setItem('user', JSON.stringify(user));
+}
+
+// Gurdamos variables del localStorage 
+const user = JSON.parse(localStorage.getItem('user'))
+
+const userName = user.name
+const userGoal = user.goal
+const userDays = user.days
+
+console.log(user)
+
+// Hacemos un fetch de JSON y declaramos una variable para data para usar despues
+fetch('programs.json')
+
+  .then(response=>response.json())
+  .then(data => generateProgram(data))
+   
+  .catch((err)=> console.log('Solicitud fallida', err))
+
+// Funcion para renderizar la pagina de workout
+function generateProgram(data){
+  
+  const program = data[userGoal[userDays]]
 }
