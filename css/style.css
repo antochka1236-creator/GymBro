@@ -202,7 +202,7 @@ h1 {
 
 .card h2 {
     margin-bottom: 0.3rem;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 1.7rem;
 }
 
@@ -211,33 +211,30 @@ h1 {
 }
 
 .card h3 {
-    font-weight: normal;
+    font-weight: 600;
     font-size: 1.2rem;
 }
 
 .card>div {
-    margin-top: 1.3rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
 }
 
-.weights-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
-}
 
 .weight-input {
     padding: 0.8rem 1rem;
-    width: 90%;
+    width: 100%;
     border-radius: 333px;
     border: none;
     background-color: var(--input-background-color);
     flex: 0 0 70%;
+}
+
+.save-weight{
+  margin-top: 3rem;
+  width: 100%;
 }
 
 .weight-input::placeholder {

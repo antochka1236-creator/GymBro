@@ -136,13 +136,13 @@ function saveUserGoal(goal,days){
 }
 
 // Gurdamos variables del localStorage 
-const user = JSON.parse(localStorage.getItem('user'))
+const user = JSON.parse(localStorage.getItem('user')) || {}
 
 const userName = user.name
 const userGoal = user.goal
 const userDays = user.days
 
-console.log(user)
+
 
 // Hacemos un fetch de JSON y declaramos una variable para data para usar despues
 fetch('programs.json')
@@ -155,5 +155,84 @@ fetch('programs.json')
 // Funcion para renderizar la pagina de workout
 function generateProgram(data){
   
-  const program = data[userGoal[userDays]]
+  renderWorkoutHeader()
+  createContainerFlex()
+
+  const days = data[userGoal][userDays]
+  const fragment = document.createDocumentFragment()
+  
+  days.forEach(day =>{
+    const card = document.createElement('div')
+    card.classList.add('card')
+    card.innerHTML = `<h2>Dia ${day.day}</h2>`
+    
+    const btn = document.createElement('button')
+    btn.classList.add('button')
+    btn.classList.add('save-weight')
+    btn.textContent = 'Guardar pesos'
+
+    
+    
+    day.exercises.forEach(ex =>{
+      const exersicesContainer = document.createElement('div')
+      exersicesContainer.innerHTML = ` <h3>${ex.name}</h3>
+                    <p>${ex.sets} sets x ${ex.rep} reps</p>
+                    <input type="text" placeholder="Introduce el peso(Kg)" class="weight-input" id="input-${day.day}-${ex.name.replace(/\s/g, '-')}">
+                    <span class="error hidden"></span>
+                  `
+    card.appendChild(exersicesContainer)
+    })
+
+    card.appendChild(btn)
+    fragment.appendChild(card)
+
+    btn.addEventListener('click', () =>{
+        const weights = JSON.parse(localStorage.getItem('weights')) || {}
+        
+
+        document.querySelectorAll('.weight-input').forEach(input =>{
+          
+          const errorMsg = input.nextElementSibling
+
+          if (!input.value) return
+          
+          if (!regexWeight.test(input.value)){
+            errorMsg.textContent = 'Solo numeros (máx. 3 dígitos)'
+            errorMsg.classList.remove('hidden')
+            return
+          }
+
+           errorMsg.classList.add('hidden')
+            weights[input.id] = input.value
+        })
+
+        localStorage.setItem('weights', JSON.stringify(weights))
+       
+    })
+  })
+
+  containerFlexCard.appendChild(fragment)
 }
+
+const containerGeneral = document.createElement('div')
+const workoutPage = document.getElementById('workout-page')
+const containerFlexCard = document.createElement('div')
+
+// Funcion para crear pagina de workout
+function renderWorkoutHeader(){
+  containerGeneral.setAttribute('id','container')
+  containerGeneral.innerHTML = `
+        <h1>Te damos la bienvenida, ${userName[0].toUpperCase() + userName.slice(1)}!</h1>
+        <p>Aquí tienes tu rutina</p>`
+  workoutPage.appendChild(containerGeneral)
+
+}
+
+// Funcion para crear un contenedro para las tarjetas
+function createContainerFlex(){
+    containerFlexCard.classList.add('flex-cards')
+    containerGeneral.appendChild(containerFlexCard)
+}
+
+// Regex para el peso
+const regexWeight = /^\d{1,3}$|^\d{1,2}\.\d$/
