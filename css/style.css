@@ -233,7 +233,7 @@ h1 {
 }
 
 .save-weight{
-  margin-top: 3rem;
+  margin: 3rem 0 0.5rem 0;
   width: 100%;
 }
 
@@ -260,6 +260,7 @@ h1 {
     cursor: pointer;
     padding: 0.5rem 0.7rem;
     border-radius: 333px;
+    transition: 0.2s;
 }
 
 .plus{
@@ -271,6 +272,7 @@ h1 {
     padding: 0.5rem 0.7rem;
     border-radius: 333px;
     background: #f6f8ff;
+    transition: 0.2s;
 }
 
 .weight-control{
@@ -278,6 +280,15 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
+}
+
+.weight-control button:hover {
+  background: var(--accent-color);
+  color: var(--text-color-white);
+}
+
+ button:active {
+  transform: scale(0.95);
 }
 
 @media (min-width: 768px) {
