@@ -215,21 +215,23 @@ h1 {
     font-size: 1.2rem;
 }
 
-.card>div {
-    margin-top: 3rem;
+.exercise {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+    border-bottom: 1px solid var(--input-background-color);
+    padding-bottom: 1rem;
 }
 
 
 .weight-input {
     padding: 0.8rem 1rem;
-    width: 100%;
     border-radius: 333px;
     border: none;
     background-color: var(--input-background-color);
-    flex: 0 0 70%;
+    flex: 0 0 100%;
+    padding-right: 3rem;
 }
 
 .save-weight{
@@ -282,6 +284,20 @@ h1 {
     gap: 0.4rem;
 }
 
+.wrapper{
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 0 0 80%;
+}
+
+.wrapper p{
+    position: absolute;
+    right: 1rem;
+    font-size: 0.85rem;
+    color: var(--place-holder-color);
+}
+
 .weight-control button:hover {
   background: var(--accent-color);
   color: var(--text-color-white);
@@ -289,6 +305,12 @@ h1 {
 
  button:active {
   transform: scale(0.95);
+}
+
+.error-workout{
+    color: #f31515;
+    font-size: 0.8rem;
+    align-self: start;
 }
 
 @media (min-width: 768px) {

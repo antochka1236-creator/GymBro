@@ -186,10 +186,10 @@ function generateProgram(data){
     btn.addEventListener('click', () =>{
        
       let allValid = true
-
+      errorPesos.classList.add('hidden')
       card.querySelectorAll('.weight-input').forEach(input =>{
           
-          const errorMsg = input.nextElementSibling
+          const errorMsg = input.closest('.exercise').querySelector('.error-workout')
 
           if (!input.value) return
           
@@ -202,7 +202,7 @@ function generateProgram(data){
             return
           }
           
-          errorPesos.classList.add('hidden')
+        
           errorMsg.classList.add('hidden')
           weights[input.id] = input.value
 
@@ -257,10 +257,14 @@ function renderExersices(card, day, weights){
               <h3>${ex.name}</h3>
               <p>${ex.sets} sets x ${ex.rep} reps</p>
               <div class="weight-control">
-              <input type="text" placeholder="Kg" class="weight-input" value="${savedWeight}" id="input-${day.day}-${ex.name.replace(/\s/g, '-')}">
+              <div class="wrapper">
+              <input type="text" class="weight-input" value="${savedWeight}" id="input-${day.day}-${ex.name.replace(/\s/g, '-')}">
+                        <p>Kg</p>
+              </div>
                         <button class="minus">-</button>
                         <button class="plus">+</button>
-                    </div>
+                </div>
+               <span class="error-workout hidden"></span>
                     `
         const btnPlus = exersicesContainer.querySelector('.plus')
         const btnMinus = exersicesContainer.querySelector('.minus')
@@ -295,8 +299,11 @@ function renderExersices(card, day, weights){
       exersicesContainer.innerHTML = `
             <h3>${ex.name}</h3>
             <p>${ex.sets} sets x ${ex.rep} reps</p>
-            <input type="text" placeholder="Introduce el peso(Kg)" class="weight-input" id="input-${day.day}-${ex.name.replace(/\s/g, '-')}">
-            <span class="error hidden"></span>`
+            <div class="wrapper">
+            <input type="text" placeholder="Introduce el peso" class="weight-input" id="input-${day.day}-${ex.name.replace(/\s/g, '-')}">
+              <p>Kg</p>
+            </div>
+            <span class="error-workout hidden"></span>`
     }
     
 
