@@ -166,7 +166,8 @@ function generateProgram(data){
   days.forEach(day =>{
     const card = document.createElement('div')
     card.classList.add('card')
-    card.innerHTML = `<h2>Dia ${day.day}</h2>`
+    card.innerHTML = `<h2>Dia ${day.day}</h2>
+    <p>${day.title}</p>`
     
     const btn = document.createElement('button')
     btn.classList.add('button')
@@ -211,7 +212,12 @@ function generateProgram(data){
         if (!allValid) return
 
         localStorage.setItem('weights', JSON.stringify(weights))
+        
+        setTimeout(() => {
         renderExersices(card, day, weights)
+        }, 500)
+        
+        
        
     })
   })
@@ -251,10 +257,11 @@ function renderExersices(card, day, weights){
     exersicesContainer.classList.add('exercise')
     const inputId = `input-${day.day}-${ex.name.replace(/\s/g, '-')}`
     const savedWeight = weights[inputId]
+    
 
     if (savedWeight){
       exersicesContainer.innerHTML = `
-              <h3>${ex.name}</h3>
+              <h3>${ex.name} <span class="arrow">↗</span></h3>
               <p>${ex.sets} sets x ${ex.rep} reps</p>
               <div class="weight-control">
               <div class="wrapper">
@@ -294,10 +301,26 @@ function renderExersices(card, day, weights){
           localStorage.setItem('weights', JSON.stringify(weights))
           renderExersices(card, day, weights)
         })
+        const weightInput = exersicesContainer.querySelector('.weight-input')
+          weightInput.addEventListener('input', () =>{
+          const errorMsg = weightInput.closest('.exercise').querySelector('.error-workout')
+
+          if (!weightInput.value) return
+          
+          if (!regexWeight.test(weightInput.value)){
+            errorMsg.textContent = 'Solo numeros (máx. 3 dígitos)'
+            errorMsg.classList.remove('hidden')
+            return
+          }
+          
+        
+          errorMsg.classList.add('hidden')
+          weights[weightInput.id] = weightInput.value
+  })
 
     }else{
       exersicesContainer.innerHTML = `
-            <h3>${ex.name}</h3>
+            <h3>${ex.name} <span class="arrow">↗</span></h3>
             <p>${ex.sets} sets x ${ex.rep} reps</p>
             <div class="wrapper">
             <input type="text" placeholder="Introduce el peso" class="weight-input" id="input-${day.day}-${ex.name.replace(/\s/g, '-')}">
@@ -309,8 +332,43 @@ function renderExersices(card, day, weights){
 
     card.insertBefore(exersicesContainer, card.querySelector('.save-weight'))
    
+   const title = exersicesContainer.querySelector('h3') 
+   title.addEventListener('click', () =>{
+    openModal(ex)
+   })
+
+   btnCloseModal.addEventListener('click', closeModal)
+   modal.addEventListener('click', (e) =>{
+    if (e.target === modal ) closeModal()
+    })
+
+    window.addEventListener('keydown', (e) =>{
+    if (e.key === 'Escape' && modal.classList.contains('modal-visible')){
+        closeModal()
+    }
+    })
+
   })
   
 
+}
+
+// Constantes para ventana modal
+const modal = document.getElementById('modal')
+const titleModal = document.getElementById('modal-title')
+const descriptionModal = document.getElementById('modal-description')
+const btnCloseModal = document.getElementById('modal-boton')
+
+// Funciones modales
+function openModal (ex){
+    
+    titleModal.innerText = ex.name
+    descriptionModal.innerText = ex.description
+
+    modal.classList.add('modal-visible')
+}
+
+function closeModal(){
+   modal.classList.remove('modal-visible')
 }
 
