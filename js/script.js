@@ -17,6 +17,8 @@ fetch('programs.json')
 
 
 const weights = JSON.parse(localStorage.getItem('weights')) || {}
+const history = JSON.parse(localStorage.getItem('history')) || {}
+const doneDays = JSON.parse(localStorage.getItem('doneDays')) || {}
 // Funcion para renderizar la pagina de workout
 function generateProgram(data){
   
@@ -25,17 +27,31 @@ function generateProgram(data){
 
   const days = data[userGoal][userDays]
   const fragment = document.createDocumentFragment()
-  
+  let currentDay = parseInt(localStorage.getItem('currentDay')) || 1
   days.forEach(day =>{
     const card = document.createElement('div')
     card.classList.add('card')
     card.innerHTML = `<h2>Dia ${day.day}</h2>
     <p>${day.title}</p>`
-    
+    card.dataset.day = day.day 
+
+
     const btn = document.createElement('button')
     btn.classList.add('button')
     btn.classList.add('save-weight')
     btn.textContent = 'Guardar pesos'
+
+    if (day.day === currentDay) {
+      card.classList.add('active-day')
+      btn.textContent = 'Guardar pesos'
+      } else if (doneDays[day.day]) {
+        card.classList.add('completed-day')
+        btn.textContent = 'Completado ✓'
+        btn.classList.add('saved')
+      } else {
+        card.classList.add('inactive-day')
+        btn.textContent = 'Próximo entrenamiento'
+      }
 
     const errorPesos = document.createElement('span')
     errorPesos.classList.add('error', 'hidden')
@@ -46,10 +62,10 @@ function generateProgram(data){
     card.appendChild(btn)
     card.appendChild(errorPesos)
     fragment.appendChild(card)
-
+    
     btn.addEventListener('click', () =>{
        
-      
+      let currentDay = parseInt(localStorage.getItem('currentDay')) || 1
       let allValid = true
       errorPesos.classList.add('hidden')
       card.querySelectorAll('.weight-input').forEach(input =>{
@@ -90,6 +106,51 @@ function generateProgram(data){
       
         }, 2000)
         
+        Object.keys(weights).forEach(inputId => {
+        if (!history[inputId]) {
+        history[inputId] = []
+         }
+
+       const newWeight = parseFloat(weights[inputId])
+
+       const lastWeight =
+        history[inputId][history[inputId].length - 1]
+
+       if (lastWeight !== newWeight) {
+        history[inputId].push(newWeight)
+         }
+         })
+
+        localStorage.setItem('history', JSON.stringify(history))
+
+
+        doneDays[day.day] = true
+
+       
+
+        const totalDays = days.length
+
+        let nextDay = currentDay + 1
+
+
+        if (nextDay > totalDays) {
+
+        nextDay = 1
+
+        localStorage.setItem('doneDays', JSON.stringify({}))
+        }
+
+        localStorage.setItem('currentDay', nextDay)
+       if (nextDay === 1) {
+        localStorage.setItem('doneDays', JSON.stringify({}))
+        Object.keys(doneDays).forEach(key => delete doneDays[key])
+        } else {
+        localStorage.setItem('doneDays', JSON.stringify(doneDays))
+         }
+
+        setTimeout(() =>{
+          updateCards(days, btn)
+        }, 2000)
         
         
        
@@ -97,6 +158,32 @@ function generateProgram(data){
   })
 
   containerFlexCard.appendChild(fragment)
+}
+
+//Funcion para renderizar tarjetas
+function updateCards(days, btn) {
+  const newCurrentDay = parseInt(localStorage.getItem('currentDay')) || 1
+  const newDoneDays = JSON.parse(localStorage.getItem('doneDays')) || {}
+
+  document.querySelectorAll('.card').forEach((card, i) => {
+    const dayNum = Number(card.dataset.day)
+    const btn = card.querySelector('.save-weight')
+    card.classList.remove('active-day', 'completed-day', 'inactive-day')
+
+    if (dayNum === newCurrentDay) {
+      card.classList.add('active-day')
+      btn.textContent = 'Guardar pesos'
+      btn.classList.remove('saved')
+    } else if (newDoneDays[dayNum]) {
+      card.classList.add('completed-day')
+      btn.textContent = 'Completado ✓'
+      btn.classList.add('saved')
+    } else {
+      card.classList.add('inactive-day')
+      btn.textContent = 'Próximo entrenamiento'
+      btn.classList.remove('saved')
+    }
+  })
 }
 
 const containerGeneral = document.createElement('div')
@@ -171,7 +258,7 @@ function renderExersices(card, day, weights){
           }else{
             weights[inputId] = parseFloat(weights[inputId]) - 5
           }
-
+          
           localStorage.setItem('weights', JSON.stringify(weights))
           renderExersices(card, day, weights)
         })
@@ -205,10 +292,12 @@ function renderExersices(card, day, weights){
     
 
     card.insertBefore(exersicesContainer, card.querySelector('.save-weight'))
-   
+     if ( history[inputId] && history[inputId].length > 0) {
+          exersicesContainer.querySelector('.arrow').textContent= '↗ •'
+          }
    const title = exersicesContainer.querySelector('h3') 
    title.addEventListener('click', () =>{
-    openModal(ex)
+    openModal(ex, inputId)
    })
 
    btnCloseModal.addEventListener('click', closeModal)
@@ -232,12 +321,38 @@ const modal = document.getElementById('modal')
 const titleModal = document.getElementById('modal-title')
 const descriptionModal = document.getElementById('modal-description')
 const btnCloseModal = document.getElementById('modal-boton')
+const ctx = document.getElementById('weightChart')
+let chartInstance = null
 
 // Funciones modales
-function openModal (ex){
+function openModal (ex, inputId){
     
     titleModal.innerText = ex.name
     descriptionModal.innerText = ex.description
+
+    if (chartInstance) {
+    chartInstance.destroy()
+  }
+  let exLabels = history[inputId]
+  if (exLabels){
+  
+  chartInstance = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: exLabels.map((_, i) => `Entreno ${i + 1}`),
+      datasets: [{
+        label: 'Evolución del peso',
+        data: exLabels,
+        borderColor: '#3355FF',
+        borderWidth: 2,
+        backgroundColor: '#f1f2fc',
+        fill: true,
+        tension: 0.3,
+        pointRadius: 3
+      }]
+    }
+  })
+  }
 
     modal.classList.add('modal-visible')
 }
@@ -260,3 +375,5 @@ btnChange.addEventListener('click', () =>{
   window.location.href = 'login.html'
   }   
 })
+
+
