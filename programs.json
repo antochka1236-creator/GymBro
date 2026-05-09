@@ -1,0 +1,621 @@
+{
+   "gain": {
+    "2": [
+      {
+        "day": 1,
+        "title": "Full Body",
+        "exercises": [
+          { "name": "Sentadilla con barra", "sets": 4, "rep": "6-8", "description": "Coloca los pies al ancho de los hombros. Mantén la espalda recta y el pecho abierto. Baja llevando la cadera hacia atrás hasta que los muslos estén paralelos al suelo. Sube empujando con los talones sin perder control ni postura." },
+          { "name": "Press de banca", "sets": 4, "rep": "6-8", "description": "Acuéstate en el banco con los pies firmes en el suelo. Baja la barra de forma controlada hasta el pecho sin rebotar. Empuja hacia arriba manteniendo estabilidad en hombros y espalda." },
+          { "name": "Remo con barra", "sets": 3, "rep": "8-10", "description": "Inclina el torso con la espalda recta. Tira de la barra hacia el abdomen activando la espalda. Baja lentamente sin perder postura." },
+          { "name": "Press militar", "sets": 3, "rep": "8-10", "description": "Empuja el peso desde los hombros hacia arriba en línea recta. Mantén el core activo para evitar arquear la espalda." },
+          { "name": "Plancha abdominal", "sets": 3, "rep": "30-60 seg", "description": "Mantén el cuerpo recto apoyado en antebrazos. Contrae abdomen y glúteos sin dejar caer la cadera." }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Full Body",
+        "exercises": [
+          { "name": "Peso muerto", "sets": 4, "rep": "5-6", "description": "Mantén la barra cerca del cuerpo. Levanta con piernas y glúteos sin redondear la espalda. Baja de forma controlada." },
+          { "name": "Dominadas", "sets": 3, "rep": "6-10", "description": "Tira del cuerpo hasta superar la barra. Baja lentamente controlando el movimiento." },
+          { "name": "Zancadas con mancuernas", "sets": 3, "rep": "8-10", "description": "Da un paso adelante y baja hasta 90 grados en ambas rodillas. Mantén equilibrio y control." },
+          { "name": "Fondos en paralelas", "sets": 3, "rep": "8-12", "description": "Baja el cuerpo hasta 90 grados en los codos. Empuja hacia arriba usando pecho y tríceps." },
+          { "name": "Curl de bíceps", "sets": 3, "rep": "10", "description": "Flexiona los brazos sin mover el torso. Controla subida y bajada." }
+        ]
+      }
+    ],
+
+     "3": [
+      {
+        "day": 1,
+        "title": "Push (pecho, hombros, tríceps)",
+        "exercises": [
+          {
+            "name": "Press de banca",
+            "sets": 4,
+            "rep": "6-8",
+            "description": "Acuéstate en el banco con los pies firmes en el suelo. Mantén los omóplatos retraídos y la espalda estable. Baja la barra de forma controlada hasta el centro del pecho sin rebotar. Empuja hacia arriba en línea recta manteniendo tensión en pecho y tríceps durante todo el movimiento."
+          },
+          {
+            "name": "Press militar",
+            "sets": 4,
+            "rep": "8-10",
+            "description": "Coloca la barra o mancuernas a la altura de los hombros. Empuja el peso hacia arriba en línea recta hasta extender los brazos. Mantén el core activado para evitar arquear la espalda y baja controladamente."
+          },
+          {
+            "name": "Fondos en paralelas",
+            "sets": 3,
+            "rep": "8-12",
+            "description": "Sujétate en las paralelas y baja el cuerpo flexionando los codos hasta aproximadamente 90 grados. Inclina ligeramente el torso hacia adelante para activar más el pecho. Empuja hacia arriba de forma controlada sin bloquear bruscamente los codos."
+          },
+          {
+            "name": "Elevaciones laterales",
+            "sets": 3,
+            "rep": "12",
+            "description": "Con mancuernas ligeras, eleva los brazos hacia los lados hasta la altura de los hombros. Mantén una ligera flexión en los codos y evita cualquier impulso o balanceo del cuerpo."
+          },
+          {
+            "name": "Extensión de tríceps",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Extiende los brazos completamente manteniendo los codos fijos cerca del cuerpo. Controla tanto la fase de subida como la de bajada para maximizar la tensión en el tríceps."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Pull (espalda y bíceps)",
+        "exercises": [
+          {
+            "name": "Dominadas",
+            "sets": 4,
+            "rep": "6-10",
+            "description": "Cuelga de la barra con agarre firme y activa el core. Tira del cuerpo hacia arriba hasta que la barbilla supere la barra. Baja lentamente controlando la fase negativa sin balanceos."
+          },
+          {
+            "name": "Remo con barra",
+            "sets": 4,
+            "rep": "8-10",
+            "description": "Inclina el torso hacia adelante manteniendo la espalda recta. Tira de la barra hacia el abdomen contrayendo la espalda y aprieta los omóplatos en la parte final del movimiento."
+          },
+          {
+            "name": "Jalón al pecho",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Tira de la barra hacia la parte superior del pecho manteniendo el torso estable. No uses impulso y controla el regreso del peso."
+          },
+          {
+            "name": "Curl de bíceps",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Flexiona los brazos sin mover el torso ni usar impulso. Contrae el bíceps en la parte alta y baja lentamente manteniendo tensión constante."
+          },
+          {
+            "name": "Curl martillo",
+            "sets": 3,
+            "rep": "10",
+            "description": "Sujeta las mancuernas con agarre neutro y flexiona los brazos manteniendo los codos fijos. Controla el movimiento sin balanceo."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Piernas",
+        "exercises": [
+          {
+            "name": "Sentadilla con barra",
+            "sets": 4,
+            "rep": "6-8",
+            "description": "Coloca los pies a la anchura de los hombros. Baja empujando la cadera hacia atrás manteniendo la espalda recta. Sube empujando con los talones sin perder estabilidad ni colapsar las rodillas hacia dentro."
+          },
+          {
+            "name": "Prensa de pierna",
+            "sets": 4,
+            "rep": "10",
+            "description": "Empuja la plataforma con los pies manteniendo control total del movimiento. No bloquees las rodillas en la extensión completa."
+          },
+          {
+            "name": "Peso muerto rumano",
+            "sets": 3,
+            "rep": "8-10",
+            "description": "Baja la barra manteniendo las piernas casi rectas y la espalda neutra. Siente el estiramiento en isquiotibiales y sube contrayendo glúteos."
+          },
+          {
+            "name": "Zancadas",
+            "sets": 3,
+            "rep": "10 por pierna",
+            "description": "Da un paso adelante y baja el cuerpo hasta que ambas rodillas formen 90 grados. Mantén el equilibrio y el control en todo momento."
+          },
+          {
+            "name": "Elevación de gemelos",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Sube sobre las puntas de los pies y baja lentamente. Mantén tensión constante en los gemelos durante todo el movimiento."
+          }
+        ]
+      }
+    ],
+
+     "4": [
+      {
+        "day": 1,
+        "title": "Upper (empuje + tirón)",
+        "exercises": [
+          {
+            "name": "Press de banca",
+            "sets": 4,
+            "rep": "6-8",
+            "description": "Acuéstate en el banco con los pies firmes en el suelo. Mantén los omóplatos retraídos y el core activo. Baja la barra de forma controlada hasta el centro del pecho sin rebotar. Empuja hacia arriba en línea recta manteniendo estabilidad en hombros y tensión en el pecho."
+          },
+          {
+            "name": "Remo con barra",
+            "sets": 4,
+            "rep": "8-10",
+            "description": "Inclina el torso manteniendo la espalda recta. Tira de la barra hacia el abdomen contrayendo la espalda. Mantén el control y evita balanceos."
+          },
+          {
+            "name": "Press militar",
+            "sets": 3,
+            "rep": "8-10",
+            "description": "Empuja el peso desde los hombros hacia arriba sin arquear la espalda. Mantén el abdomen activado durante todo el movimiento."
+          },
+          {
+            "name": "Dominadas",
+            "sets": 3,
+            "rep": "6-10",
+            "description": "Tira del cuerpo hasta superar la barra con la barbilla. Baja lentamente controlando la fase negativa sin impulso."
+          },
+          {
+            "name": "Curl de bíceps",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Flexiona los brazos sin mover el torso. Controla la subida y bajada manteniendo tensión constante en el bíceps."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Piernas (fuerza)",
+        "exercises": [
+          {
+            "name": "Sentadilla con barra",
+            "sets": 4,
+            "rep": "6-8",
+            "description": "Coloca los pies al ancho de hombros. Baja empujando la cadera hacia atrás manteniendo la espalda recta. Sube empujando con los talones sin perder control ni colapsar las rodillas hacia dentro."
+          },
+          {
+            "name": "Prensa de pierna",
+            "sets": 4,
+            "rep": "10",
+            "description": "Empuja la plataforma con control total del movimiento. Evita bloquear completamente las rodillas en la extensión."
+          },
+          {
+            "name": "Peso muerto rumano",
+            "sets": 3,
+            "rep": "8-10",
+            "description": "Baja la barra manteniendo la espalda neutra y las piernas ligeramente flexionadas. Siente el estiramiento en isquiotibiales y sube contrayendo glúteos."
+          },
+          {
+            "name": "Zancadas",
+            "sets": 3,
+            "rep": "10 por pierna",
+            "description": "Da un paso largo hacia adelante y baja hasta 90 grados en ambas rodillas. Mantén el equilibrio y el control en todo momento."
+          },
+          {
+            "name": "Elevación de gemelos",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Sube sobre las puntas de los pies y baja lentamente. Mantén tensión constante en los gemelos."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Push (pecho, hombro, tríceps)",
+        "exercises": [
+          {
+            "name": "Press inclinado con mancuernas",
+            "sets": 4,
+            "rep": "8-10",
+            "description": "Acuéstate en banco inclinado. Baja las mancuernas al pecho superior y empuja hacia arriba controlando el movimiento sin chocar los pesos."
+          },
+          {
+            "name": "Press militar",
+            "sets": 3,
+            "rep": "8-10",
+            "description": "Empuja el peso verticalmente sin arquear la espalda. Mantén el core firme."
+          },
+          {
+            "name": "Elevaciones laterales",
+            "sets": 3,
+            "rep": "12",
+            "description": "Eleva los brazos hasta la altura de los hombros sin impulso ni balanceo."
+          },
+          {
+            "name": "Fondos en paralelas",
+            "sets": 3,
+            "rep": "8-12",
+            "description": "Baja el cuerpo controladamente hasta 90 grados en los codos. Empuja hacia arriba activando pecho y tríceps."
+          },
+          {
+            "name": "Extensión de tríceps",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Extiende los brazos manteniendo los codos fijos cerca del cuerpo. Controla todo el recorrido."
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Pull + posterior chain",
+        "exercises": [
+          {
+            "name": "Peso muerto",
+            "sets": 4,
+            "rep": "5-6",
+            "description": "Mantén la barra cerca del cuerpo. Levanta con piernas y glúteos sin redondear la espalda. Controla la bajada."
+          },
+          {
+            "name": "Dominadas",
+            "sets": 3,
+            "rep": "6-10",
+            "description": "Sube el cuerpo hasta la barra activando la espalda. Baja lentamente sin impulso."
+          },
+          {
+            "name": "Remo con barra",
+            "sets": 3,
+            "rep": "8-10",
+            "description": "Tira la barra hacia el abdomen contrayendo la espalda y manteniendo postura estable."
+          },
+          {
+            "name": "Curl martillo",
+            "sets": 3,
+            "rep": "10",
+            "description": "Flexiona los brazos con agarre neutro manteniendo control total del movimiento."
+          },
+          {
+            "name": "Plancha abdominal",
+            "sets": 3,
+            "rep": "30-60 seg",
+            "description": "Mantén el cuerpo recto con abdomen y glúteos activados. Evita hundir la cadera."
+          }
+        ]
+      }
+    ]
+  },
+
+  "cut": {
+    "2": [
+      {
+        "day": 1,
+        "title": "Full body + cardio (definición)",
+        "exercises": [
+          {
+            "name": "Sentadilla",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Coloca los pies al ancho de los hombros. Mantén el torso recto y el core activo. Baja de forma controlada empujando la cadera hacia atrás y manteniendo las rodillas alineadas con los pies. Sube empujando con los talones sin perder estabilidad."
+          },
+          {
+            "name": "Flexiones",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Mantén el cuerpo en línea recta desde la cabeza hasta los pies. Baja el pecho hacia el suelo controlando el movimiento sin colapsar la zona lumbar. Empuja hacia arriba activando pecho, hombros y tríceps."
+          },
+          {
+            "name": "Remo con mancuernas",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Inclina el torso con la espalda recta. Tira de las mancuernas hacia el abdomen contrayendo la espalda. Evita balanceos y controla tanto subida como bajada."
+          },
+          {
+            "name": "Burpees",
+            "sets": 3,
+            "rep": "10-15",
+            "description": "Baja a posición de sentadilla, apoya las manos en el suelo y estira las piernas a posición de plancha. Realiza una flexión opcional, vuelve a la sentadilla y salta explosivamente hacia arriba manteniendo ritmo constante."
+          },
+          {
+            "name": "Plancha abdominal",
+            "sets": 3,
+            "rep": "30-45 seg",
+            "description": "Apoya los antebrazos y mantén el cuerpo completamente recto. Activa abdomen y glúteos. Evita que la cadera suba o caiga durante el ejercicio."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Full body + cardio intensivo",
+        "exercises": [
+          {
+            "name": "Peso muerto ligero",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Mantén la espalda recta y baja el peso controladamente. Sube activando glúteos y piernas sin redondear la espalda."
+          },
+          {
+            "name": "Zancadas",
+            "sets": 3,
+            "rep": "12 por pierna",
+            "description": "Da un paso largo hacia adelante y baja hasta 90 grados en ambas rodillas. Mantén equilibrio y control en todo momento."
+          },
+          {
+            "name": "Dominadas o jalón",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Si haces dominadas, sube hasta la barra controlando el movimiento. Si usas jalón, tira la barra hacia el pecho sin impulso."
+          },
+          {
+            "name": "Burpees",
+            "sets": 3,
+            "rep": "10-15",
+            "description": "Movimiento completo de sentadilla, plancha y salto. Mantén ritmo constante y buena técnica en cada repetición."
+          },
+          {
+            "name": "Abdominales",
+            "sets": 3,
+            "rep": "15-20",
+            "description": "Eleva el torso contrayendo el abdomen sin tirar del cuello. Baja controladamente manteniendo tensión en todo momento."
+          }
+        ]
+      }
+    ],
+
+    "3": [
+      {
+        "day": 1,
+        "title": "Full body + cardio (quema grasa)",
+        "exercises": [
+          {
+            "name": "Flexiones (push-ups)",
+            "sets": 4,
+            "rep": "12-15",
+            "description": "Mantén el cuerpo en línea recta desde la cabeza hasta los pies. Baja el pecho hacia el suelo de forma controlada sin colapsar la zona lumbar. Empuja hacia arriba activando pecho, hombros y tríceps. Mantén el core firme durante todo el movimiento."
+          },
+          {
+            "name": "Press de banca ligero",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Acuéstate en el banco con los pies firmes. Baja la barra controladamente hasta el pecho y empuja hacia arriba sin rebote. Mantén tensión constante en el pecho."
+          },
+          {
+            "name": "Press militar ligero",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Empuja el peso desde los hombros hacia arriba sin arquear la espalda. Mantén el abdomen activado y baja de forma controlada."
+          },
+          {
+            "name": "Burpees",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Baja a sentadilla, apoya manos en el suelo, extiende piernas a plancha, vuelve a sentadilla y salta. Mantén ritmo constante sin perder técnica."
+          },
+          {
+            "name": "Plancha abdominal",
+            "sets": 3,
+            "rep": "30-45 seg",
+            "description": "Apoya antebrazos y mantén el cuerpo recto. Activa abdomen y glúteos sin dejar caer la cadera."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Pull + cardio",
+        "exercises": [
+          {
+            "name": "Jalón al pecho",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Tira de la barra hacia la parte superior del pecho sin balancearte. Controla la bajada del peso."
+          },
+          {
+            "name": "Remo con mancuernas",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Inclina el torso con espalda recta y tira de las mancuernas hacia el abdomen. Evita impulso."
+          },
+          {
+            "name": "Curl de bíceps",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Flexiona los brazos sin mover el torso. Controla subida y bajada manteniendo tensión en el bíceps."
+          },
+          {
+            "name": "Jumping jacks",
+            "sets": 3,
+            "rep": "30 seg",
+            "description": "Salta abriendo y cerrando brazos y piernas manteniendo ritmo constante para elevar pulsaciones."
+          },
+          {
+            "name": "Burpees",
+            "sets": 3,
+            "rep": "10",
+            "description": "Ejercicio completo de cardio con sentadilla, plancha y salto explosivo. Mantén técnica estable."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Piernas + cardio final",
+        "exercises": [
+          {
+            "name": "Sentadillas",
+            "sets": 4,
+            "rep": "15",
+            "description": "Baja con la espalda recta y el pecho abierto. Empuja con los talones al subir manteniendo control y estabilidad en rodillas."
+          },
+          {
+            "name": "Zancadas",
+            "sets": 3,
+            "rep": "12 por pierna",
+            "description": "Da un paso largo hacia adelante y baja hasta 90 grados en ambas rodillas. Mantén equilibrio y postura estable."
+          },
+          {
+            "name": "Jump squats",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Realiza una sentadilla y salta explosivamente hacia arriba. Aterriza suavemente controlando el impacto."
+          },
+          {
+            "name": "Step-ups",
+            "sets": 3,
+            "rep": "12",
+            "description": "Sube a una plataforma con una pierna y controla la bajada. Alterna piernas manteniendo estabilidad."
+          },
+          {
+            "name": "Cardio (cinta o bici)",
+            "sets": 1,
+            "rep": "10-15 min",
+            "description": "Mantén un ritmo constante de cardio moderado para aumentar la quema de grasa y mejorar resistencia."
+          }
+        ]
+      }
+    ],
+
+    "4": [
+      {
+        "day": 1,
+        "title": "Full body + cardio (definición)",
+        "exercises": [
+          {
+            "name": "Flexiones (push-ups)",
+            "sets": 4,
+            "rep": "12-15",
+            "description": "Mantén el cuerpo en línea recta desde la cabeza hasta los pies. Baja el pecho hacia el suelo de forma controlada sin hundir la zona lumbar. Empuja hacia arriba activando pecho, hombros y tríceps. Mantén el core firme durante todo el movimiento."
+          },
+          {
+            "name": "Press de banca ligero",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Acuéstate en el banco con los pies firmes en el suelo. Baja la barra controladamente hasta el pecho sin rebote. Empuja hacia arriba de forma estable manteniendo tensión constante en el pecho."
+          },
+          {
+            "name": "Remo con mancuernas",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Inclina el torso con la espalda recta y tira de las mancuernas hacia el abdomen. Aprieta la espalda en la parte alta del movimiento y baja controladamente."
+          },
+          {
+            "name": "Burpees",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Realiza una sentadilla, apoya manos en el suelo, extiende piernas a plancha, realiza flexión opcional, vuelve a sentadilla y salta explosivamente. Mantén ritmo constante."
+          },
+          {
+            "name": "Plancha abdominal",
+            "sets": 3,
+            "rep": "30-45 seg",
+            "description": "Apoya los antebrazos y mantén el cuerpo completamente recto. Activa abdomen y glúteos sin dejar caer la cadera ni elevarla demasiado."
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "title": "Piernas + cardio",
+        "exercises": [
+          {
+            "name": "Sentadillas",
+            "sets": 4,
+            "rep": "15",
+            "description": "Coloca los pies al ancho de los hombros. Baja manteniendo la espalda recta y el pecho abierto. Sube empujando con los talones manteniendo control en rodillas."
+          },
+          {
+            "name": "Zancadas",
+            "sets": 3,
+            "rep": "12 por pierna",
+            "description": "Da un paso largo hacia adelante y baja hasta que ambas rodillas formen 90 grados. Mantén equilibrio y postura estable durante todo el movimiento."
+          },
+          {
+            "name": "Jump squats",
+            "sets": 3,
+            "rep": "10-12",
+            "description": "Realiza una sentadilla y salta explosivamente hacia arriba. Aterriza suavemente absorbiendo el impacto con las piernas."
+          },
+          {
+            "name": "Step-ups",
+            "sets": 3,
+            "rep": "12",
+            "description": "Sube a una plataforma con una pierna y controla la bajada. Alterna piernas manteniendo estabilidad y control."
+          },
+          {
+            "name": "Cardio (cinta o bici)",
+            "sets": 1,
+            "rep": "10-15 min",
+            "description": "Mantén ritmo constante de cardio moderado para mejorar resistencia y favorecer la quema de grasa."
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "Pull + cardio",
+        "exercises": [
+          {
+            "name": "Jalón al pecho",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Tira de la barra hacia el pecho sin balancear el cuerpo. Controla la fase de regreso lentamente."
+          },
+          {
+            "name": "Remo con barra",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Inclina el torso con espalda recta y tira de la barra hacia el abdomen. Mantén control sin impulso."
+          },
+          {
+            "name": "Curl de bíceps",
+            "sets": 3,
+            "rep": "12-15",
+            "description": "Flexiona los brazos sin mover el torso. Mantén tensión constante en el bíceps durante todo el ejercicio."
+          },
+          {
+            "name": "Jumping jacks",
+            "sets": 3,
+            "rep": "30 seg",
+            "description": "Salta abriendo y cerrando brazos y piernas a ritmo constante para elevar la frecuencia cardíaca."
+          },
+          {
+            "name": "Burpees",
+            "sets": 3,
+            "rep": "10",
+            "description": "Movimiento completo de sentadilla, plancha y salto. Mantén técnica estable y ritmo constante."
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "title": "Full body + cardio final",
+        "exercises": [
+          {
+            "name": "Sentadilla con peso corporal",
+            "sets": 4,
+            "rep": "15-20",
+            "description": "Baja controladamente manteniendo la espalda recta. Sube empujando con los talones sin perder estabilidad."
+          },
+          {
+            "name": "Zancadas caminando",
+            "sets": 3,
+            "rep": "12 por pierna",
+            "description": "Realiza zancadas avanzando hacia delante manteniendo equilibrio y control en cada paso."
+          },
+          {
+            "name": "Mountain climbers",
+            "sets": 3,
+            "rep": "30 seg",
+            "description": "En posición de plancha, lleva las rodillas al pecho alternando rápidamente. Mantén el core activado."
+          },
+          {
+            "name": "Abdominales",
+            "sets": 3,
+            "rep": "20",
+            "description": "Eleva el torso contrayendo el abdomen sin tirar del cuello. Baja de forma controlada."
+          },
+          {
+            "name": "Cardio (cinta o bici)",
+            "sets": 1,
+            "rep": "15 min",
+            "description": "Mantén un ritmo constante para mejorar resistencia y finalizar el entrenamiento con alta quema calórica."
+          }
+        ]
+      }
+    ]
+  }
+}

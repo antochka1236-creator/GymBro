@@ -25,14 +25,26 @@
                 <img src="assets/logo/logo.svg" alt="Logo Blue">
                 <h1>GymBro</h1>
             </div>
-           <p>Crea tu rutina personalizada</p>
-           <form id="start-form" class="inputs">
-                <button class="button" type="submit">Empezar →</button>
-           </form>
+            <p>Crea tu rutina personalizada</p>
+            <form class="inputs" id="setup-form">
+                <select name="goal" id="goal">
+                    <option value="" disabled selected>Objetivo:</option>
+                    <option value="gain">Ganar de masa muscular</option>
+                    <option value="cut">Perder grasa</option>
+                </select>
+                <span id="error-goal" class="error hidden"></span>
+                <select name="days" id="days">
+                    <option value="" disabled selected>Frecuencia de entrenamiento</option>
+                    <option value="2">2 días a la semana</option>
+                    <option value="3">3 días a la semana</option>
+                    <option value="4">4+ días a la semana</option>
+                </select>
+                <span id="error-days" class="error hidden" ></span>
+               <button class="button">Continuar →</button>
+            </form> 
         </div>
     </div>
    </section>
-
-   <script src="js/index.js"></script>
+     <script src="js/setup.js"></script>
 </body>
 </html>

@@ -15,24 +15,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <section class="mobile-unboarding">
-    <div class="content">
-        <img src="assets/welcome_img/welcome2.jpg" alt="Welcome desktop">
-        <img src="assets/welcome_img/image 96.jpg" alt="Welcome img">
-        <div class="welcome-text">
-            <div>
-                <img src="assets/logo/logo_white.svg" alt="Logo White">
-                <img src="assets/logo/logo.svg" alt="Logo Blue">
-                <h1>GymBro</h1>
-            </div>
-           <p>Crea tu rutina personalizada</p>
-           <form id="start-form" class="inputs">
-                <button class="button" type="submit">Empezar →</button>
-           </form>
+   <section id="workout-page">
+    <div class="workout-flex">
+        <div class="logo">
+            <img src="assets/logo/logo_white.svg" alt="Logo White">
+            <img src="assets/logo/logo.svg" alt="Logo Blue">
+            <div id="logo-workout">GymBro</div>
+        </div>
+        <div class="user-presence">
+            <p id="current-user"></p>
+            <button id="change-user">⇄</button>
         </div>
     </div>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <canvas id="weightChart"></canvas>
+        </div>
+        <div id="modal-boton">X</div>
+    </div>
    </section>
-
-   <script src="js/index.js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    
 </body>
 </html>
