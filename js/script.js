@@ -5,7 +5,9 @@ const userName = user.name
 const userGoal = user.goal
 const userDays = user.days
 
-
+if (!user.name || !user.goal || !user.days) {
+  window.location.href = 'login.html'
+}
 
 // Hacemos un fetch de JSON y declaramos una variable para data para usar despues
 fetch('programs.json')
