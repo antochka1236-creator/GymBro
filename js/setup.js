@@ -71,3 +71,8 @@ function saveUserGoal(goal,days){
 
   localStorage.setItem('user', JSON.stringify(user));
 }
+
+const user = JSON.parse(localStorage.getItem('user')) || {}
+if (!user.name) {
+  window.location.href = 'login.html'
+}

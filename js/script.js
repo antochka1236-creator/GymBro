@@ -5,7 +5,9 @@ const userName = user.name
 const userGoal = user.goal
 const userDays = user.days
 
-
+if (!user.name || !user.goal || !user.days) {
+  window.location.href = 'login.html'
+}
 
 // Hacemos un fetch de JSON y declaramos una variable para data para usar despues
 fetch('programs.json')
@@ -149,7 +151,7 @@ function generateProgram(data){
          }
 
         setTimeout(() =>{
-          updateCards(days, btn)
+          updateCards()
         }, 2000)
         
         
@@ -161,7 +163,7 @@ function generateProgram(data){
 }
 
 //Funcion para renderizar tarjetas
-function updateCards(days, btn) {
+function updateCards() {
   const newCurrentDay = parseInt(localStorage.getItem('currentDay')) || 1
   const newDoneDays = JSON.parse(localStorage.getItem('doneDays')) || {}
 
