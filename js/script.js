@@ -151,7 +151,7 @@ function generateProgram(data){
          }
 
         setTimeout(() =>{
-          updateCards(days, btn)
+          updateCards()
         }, 2000)
         
         
@@ -163,7 +163,7 @@ function generateProgram(data){
 }
 
 //Funcion para renderizar tarjetas
-function updateCards(days, btn) {
+function updateCards() {
   const newCurrentDay = parseInt(localStorage.getItem('currentDay')) || 1
   const newDoneDays = JSON.parse(localStorage.getItem('doneDays')) || {}
 
