@@ -130,7 +130,7 @@ Cambiar usuario → Bienvenida
 
 ---
 
-markdown## 🧠 Qué ocurre en cada paso
+## 🧠 Qué ocurre en cada paso
 
 🚀 **Bienvenida**
 * Pantalla de inicio con botón "Empezar"
