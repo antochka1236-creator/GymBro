@@ -104,7 +104,7 @@ Cambiar usuario → Bienvenida
       ↓
 [ RUTINA — DÍA ACTIVO ]
       ↓
-[ INTRODUCIR PESOS ]
+[ INTRODUCIR O AJUSTAR PESOS ]
       ↓
 [ GUARDAR PESOS ]
       ↓
@@ -113,11 +113,6 @@ Cambiar usuario → Bienvenida
 [ REPETIR HASTA COMPLETAR CICLO ] ──┘
       ↓
 [ CICLO REINICIADO AUTOMÁTICAMENTE ]
-
-
-[ PESOS YA GUARDADOS ]
-      ↓
-[ AJUSTAR CON +/- ]
 
 
 [ CLICK EN EJERCICIO ] → [ MODAL ]
