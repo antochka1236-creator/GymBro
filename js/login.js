@@ -33,6 +33,8 @@ function isNameValid(input){
 function saveUser(input){
     if(!isNameValid(input)) return
 
+    localStorage.clear()
+
     const user = JSON.parse(localStorage.getItem('user')) || {}
 
     user.name = input
